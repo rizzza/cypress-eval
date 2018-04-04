@@ -2,7 +2,8 @@
     "env": {
         "browser": true,
         "es6": true,
-        "node": true
+        "node": true,
+        "cypress/globals": true
     },
     "extends": "eslint:recommended",
     "parser": "babel-eslint",
@@ -17,16 +18,7 @@
         ],
         "strict": 1
     },
-    "globals": {
-        "Cypress": true,
-        "cy": true,
-        "describe": true,
-        "context": true,
-        "before": true,
-        "beforeEach": true,
-        "after": true,
-        "afterEach": true,
-        "it": true,
-        "expect": true
-    }
+    "plugins": [
+        "cypress"
+    ]
 }
