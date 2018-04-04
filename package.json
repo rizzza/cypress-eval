@@ -1,0 +1,25 @@
+{
+  "name": "cypress-inator",
+  "version": "0.0.1",
+  "description": "Evaluating Cypress.io",
+  "main": "",
+  "dependencies": {
+    "npm": "^5.7.1",
+    "cypress": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^3.19.0",
+    "prettier": "^1.11.1"
+  },
+  "scripts": {
+    "cypress:open": "cypress open",
+    "lint": "eslint -c ./eslint.config.json --fix",
+    "prettier": "prettier --single-quote --write --parser='flow'",
+    "flow": "flow",
+    "setup": "",
+    "test": ""
+  }
+}
