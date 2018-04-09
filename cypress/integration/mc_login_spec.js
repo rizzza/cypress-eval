@@ -1,26 +1,7 @@
 const config = require("../../lib/envConfig");
 
 describe("My First Test", function() {
-  // beforeEach(function() {
-  //   cy
-  //     .request("POST", "https://api.testing.sendgrid.com/v3/public/tokens", {
-  //       username: "nlvx_automated_test_user_paid_26",
-  //       password: "T3stPasS"
-  //     })
-  //     .then(response => {
-  //       expect(response.status).to.eq(200);
-  //     });
-  //   // debugger;
-  // });
-  it("Does not do much!", function() {
-    expect(true).to.equal(true);
-  });
-
-  it("Does more than you know!", function() {
-    expect(true).to.equal(false);
-  });
-
-  it("logs into sendgrid and navigates to marketing campaigns", function() {
+  beforeEach(function() {
     cy
       .request("POST", "https://api.testing.sendgrid.com/v3/public/tokens", {
         username: "nlvx_automated_test_user_paid_26",
@@ -31,7 +12,16 @@ describe("My First Test", function() {
         cy.log(response.body["token"]);
         cy.setCookie("mako_auth_token", response.body["token"]);
       });
+  });
+  it("Does not do much!", function() {
+    expect(true).to.equal(true);
+  });
 
+  it("Does more than you know!", function() {
+    expect(true).to.equal(false);
+  });
+
+  it("logs into sendgrid and navigates to marketing campaigns", function() {
     // cy.visit(config.url + "/marketing_campaigns");
     cy.visit("https://testing.sendgrid.com/marketing_campaigns");
     // debugger;
